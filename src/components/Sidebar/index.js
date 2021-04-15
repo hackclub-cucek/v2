@@ -21,8 +21,8 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink to="about" onClick={toggle}>
                         About
                     </SidebarLink>
-                    <SidebarLink to="discover" onClick={toggle}>
-                        Discover
+                    <SidebarLink to="events" onClick={toggle}>
+                        Events
                     </SidebarLink>
                     <SidebarLink to="contact" onClick={toggle}>
                         Contact
