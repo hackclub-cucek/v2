@@ -10,7 +10,7 @@ export const homeObjOne = {
     topLine: 'Hack Club CUCEK',
     headline: 'What is Hackclub',
     description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
-    buttonLabel: 'Join Now',
+    buttonLabel: 'gallery',
     imgStart: false,
     img: TeamLogo,
     alt: 'Team',
@@ -28,7 +28,7 @@ export const homeObjTwo = {
     topLine: 'Events',
     headline: 'Events',
     description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
-    buttonLabel: 'Join Now',
+    buttonLabel: 'gallery',
     imgStart: true,
     img: Events,
     alt: 'Events',
@@ -45,11 +45,28 @@ export const homeObjThree = {
     topLine: 'Contact',
     headline: 'Collab with US',
     description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
-    buttonLabel: 'Join Now',
+    buttonLabel: 'gallery',
     imgStart: false,
     img: Collab,
     alt: 'Team',
     dark: true,
     primary: true,
     darkText: false
+}
+
+export const homeObjFour = {
+    id: 'gallery',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'Events',
+    headline: 'Events',
+    description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
+    buttonLabel: 'gallery',
+    imgStart: true,
+    img: Events,
+    alt: 'Events',
+    dark: false,
+    primary: false,
+    darkText: true
 }

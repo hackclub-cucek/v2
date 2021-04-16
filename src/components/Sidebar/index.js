@@ -27,12 +27,12 @@ const Sidebar = ({ isOpen, toggle }) => {
                     <SidebarLink to="contact" onClick={toggle}>
                         Contact
                     </SidebarLink>
-                    <SidebarLink to="join" onClick={toggle}>
-                        Join Now
+                    <SidebarLink to="gallery" onClick={toggle}>
+                        gallery
                     </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute to="/join">Join Now</SidebarRoute>
+                    <SidebarRoute to="/gallery">gallery</SidebarRoute>
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>

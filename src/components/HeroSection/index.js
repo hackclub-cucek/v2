@@ -33,7 +33,7 @@ const HeroSection = () => {
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button 
-                    to='join' 
+                    to='gallery' 
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary='true'
