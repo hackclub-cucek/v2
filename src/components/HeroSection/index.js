@@ -21,7 +21,7 @@ const HeroSection = () => {
     }
 
     return (
-        <HeroContainer>
+        <HeroContainer className="home">
             <HeroBg>
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
@@ -33,7 +33,7 @@ const HeroSection = () => {
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button 
-                    to='gallery' 
+                    to='/gallery' 
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary='true'

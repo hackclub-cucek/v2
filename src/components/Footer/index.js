@@ -72,23 +72,23 @@ const Footer = () => {
                             </SocialLogo>
                             <WebsiteRights>Hack Club CUCEK ©️ {new Date().getFullYear()}
                             All rights reserved.</WebsiteRights>
-                            <SocialIconLink href="/" target="_blank"
+                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
                             aria-label="Instagram">
                                 <FaInstagram />
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank"
+                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
                             aria-label="Twitter">
                                 <FaTwitter/>
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank"
+                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
                             aria-label="Youtube">
                                 <FaYoutube/>
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank"
+                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
                             aria-label="Github">
                                 <FaGithub />
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank"
+                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
                             aria-label="Linkedin">
                                 <FaLinkedin />
                             </SocialIconLink>

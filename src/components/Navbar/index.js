@@ -85,7 +85,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtnLink to='/gallery'>gallery</NavBtnLink>
+                            <NavBtnLink to='/google'>Google</NavBtnLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>

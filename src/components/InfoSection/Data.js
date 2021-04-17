@@ -10,7 +10,7 @@ export const homeObjOne = {
     topLine: 'Hack Club CUCEK',
     headline: 'What is Hackclub',
     description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
-    buttonLabel: 'gallery',
+    buttonLabel: 'home',
     imgStart: false,
     img: TeamLogo,
     alt: 'Team',
