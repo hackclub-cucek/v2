@@ -85,7 +85,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtnLink to='/google'>Google</NavBtnLink>
+                            <NavBtnLink href="/search" target="_blank" rel="noreferrer">Google</NavBtnLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>
