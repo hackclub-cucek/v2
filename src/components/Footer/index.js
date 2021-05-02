@@ -72,15 +72,15 @@ const Footer = () => {
                             </SocialLogo>
                             <WebsiteRights>Hack Club CUCEK ©️ {new Date().getFullYear()}
                             All rights reserved.</WebsiteRights>
-                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
+                            <SocialIconLink href="https://www.instagram.com/programmermecucek/" target="_blank" rel="noreferrer"
                             aria-label="Instagram">
                                 <FaInstagram />
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
+                            <SocialIconLink href="https://twitter.com/hackclubcucek" target="_blank" rel="noreferrer"
                             aria-label="Twitter">
                                 <FaTwitter/>
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
+                            <SocialIconLink href="https://www.youtube.com/channel/UClkbYSxkA7kATU6JQx00d3g/videos" target="_blank" rel="noreferrer"
                             aria-label="Youtube">
                                 <FaYoutube/>
                             </SocialIconLink>
@@ -88,7 +88,7 @@ const Footer = () => {
                             aria-label="Github">
                                 <FaGithub />
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
+                            <SocialIconLink href="https://www.linkedin.com/company/hackclubcucek/" target="_blank" rel="noreferrer"
                             aria-label="Linkedin">
                                 <FaLinkedin />
                             </SocialIconLink>
