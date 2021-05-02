@@ -84,7 +84,7 @@ const Footer = () => {
                             aria-label="Youtube">
                                 <FaYoutube/>
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" rel="noreferrer"
+                            <SocialIconLink href="https://github.com/hackclub-cucek" target="_blank" rel="noreferrer"
                             aria-label="Github">
                                 <FaGithub />
                             </SocialIconLink>
