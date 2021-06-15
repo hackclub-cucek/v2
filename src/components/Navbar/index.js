@@ -38,7 +38,7 @@ const Navbar = ({ toggle }) => {
             <IconContext.Provider value={{ color: '#fff' }}>
                 <Nav scrollNav={scrollNav}>
                     <NavbarContainer>
-                        <NavLogo to='/' onClick={toggleHome}>j4ck</NavLogo>
+                        <NavLogo to='/' onClick={toggleHome}>Hack Club</NavLogo>
                         <MobileIcon onClick={toggle}>
                             <FaBars />
                         </MobileIcon>
@@ -84,9 +84,9 @@ const Navbar = ({ toggle }) => {
                                 >gallery</NavLinks>
                             </NavItem>
                         </NavMenu>
-                        <NavBtn>
+                        {/* <NavBtn>
                             <NavBtnLink href="https://hackclub-cucek.github.io/search/" target="_blank" rel="noreferrer">Google</NavBtnLink>
-                        </NavBtn>
+                        </NavBtn> */}
                     </NavbarContainer>
                 </Nav>
             </IconContext.Provider>

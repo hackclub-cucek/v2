@@ -31,7 +31,7 @@ const HeroSection = () => {
                     Looking for a tech group accepted worldwide from our college?
                     You just got into the right place.
                 </HeroP>
-                <HeroBtnWrapper>
+                {/* <HeroBtnWrapper>
                     <Button 
                     to='/gallery' 
                     onMouseEnter={onHover}
@@ -41,7 +41,7 @@ const HeroSection = () => {
                     >
                         Get Started {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
-                </HeroBtnWrapper>
+                </HeroBtnWrapper> */}
             </HeroContent>
 
         </HeroContainer>
