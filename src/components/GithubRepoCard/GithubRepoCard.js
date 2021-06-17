@@ -10,7 +10,7 @@ export default function GithubRepoCard({repo}) {
 
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div>
+      <div className="allinone">
         <div
           className="repo-card-div repo-card-div"
           key={repo.node.id}

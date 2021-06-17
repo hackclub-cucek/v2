@@ -1,5 +1,6 @@
 @import "../../_globalColor";
 
+
 .repo-card-div {
   color: $githubRepoCardColor;
   background-color: $lightBackground2;
@@ -49,7 +50,7 @@
 }
 
 .repo-svg {
-  margin-right: 0.5rem;
+  margin-right: .5rem;
   min-width: 16px;
 }
 
@@ -57,13 +58,13 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   color: $githubRepoCardRepoNameColor;
-  margin-bottom: 5.75rem;
+  margin-bottom: .75rem;
   font-size: 25px;
   font-weight: 700;
   letter-spacing: -0.5px;
   overflow: hidden;
   margin: 0px;
-  height: 40px;
+  height: 32px;
 }
 
 .repo-star-svg {
@@ -73,8 +74,15 @@
 .repo-description {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  margin: 10px;
+}
+
+.repo-right-stat,
+.repo-left-stat span{
+  margin: 10px;
+  padding: 5px;
 }
 
 .dark-card-mode {

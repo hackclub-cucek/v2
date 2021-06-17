@@ -42,7 +42,7 @@ export default function Projects() {
     openSource.display
   ) {
     return (
-      <div>
+      <div className="allinone">
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
           <h1 className="project-title">Open Source Projects</h1>
