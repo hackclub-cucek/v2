@@ -5,9 +5,7 @@ import {
     CloseIcon,
     SidebarWrapper,
     SidebarMenu,
-    SidebarLink,
-    SideBtnWrap,
-    SidebarRoute
+    SidebarLink
 } from './SidebarElements';
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -31,9 +29,6 @@ const Sidebar = ({ isOpen, toggle }) => {
                         gallery
                     </SidebarLink>
                 </SidebarMenu>
-                {/* <SideBtnWrap>
-                    <SidebarRoute to="/google">Google</SidebarRoute>
-                </SideBtnWrap> */}
             </SidebarWrapper>
         </SidebarContainer>
     )

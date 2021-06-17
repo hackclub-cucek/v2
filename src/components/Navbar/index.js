@@ -9,9 +9,7 @@ import {
     MobileIcon,
     NavMenu,
     NavItem,
-    NavLinks,
-    NavBtn,
-    NavBtnLink
+    NavLinks
 } from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
@@ -84,9 +82,6 @@ const Navbar = ({ toggle }) => {
                                 >gallery</NavLinks>
                             </NavItem>
                         </NavMenu>
-                        {/* <NavBtn>
-                            <NavBtnLink href="https://hackclub-cucek.github.io/search/" target="_blank" rel="noreferrer">Google</NavBtnLink>
-                        </NavBtn> */}
                     </NavbarContainer>
                 </Nav>
             </IconContext.Provider>

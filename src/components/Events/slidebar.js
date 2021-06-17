@@ -3,16 +3,6 @@ import styled from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
 import { Link as LinkR } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
-// import {
-//     SidebarContainer,
-//     Icon,
-//     CloseIcon,
-//     SidebarWrapper,
-//     SidebarMenu,
-//     SidebarLink,
-//     SideBtnWrap,
-//     SidebarRoute
-// } from './SidebarElements';
 
 const Sidebar = ({ isOpen, toggle }) => {
     return (

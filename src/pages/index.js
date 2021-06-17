@@ -3,12 +3,12 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import InfoSection1 from '../components/InfoSection1';
 import InfoSection2 from '../components/InfoSection2';
-import {homeObjOne} from '../Data/Data';
+import {homeObjFour ,homeObjThree ,homeObjTwo ,homeObjOne} from '../Data/Data';
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
-import { homeObjTwo } from '../Data/Data';
 import InfoSection3 from '../components/InfoSection3';
-import { homeObjThree } from '../Data/Data';
+import InfoSection4 from '../components/InfoSection4';
+
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ const Home = () => {
             <InfoSection1 {...homeObjOne}/>
             <InfoSection2 {...homeObjTwo}/>
             <InfoSection3 {...homeObjThree}/>
-            {/* <InfoSection {...homeObjFour}/> */}
+            <InfoSection4 {...homeObjFour}/>
             <Footer />
         </>
     )
