@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages';
 import Events from './pages/Events';
 import Projects from './pages/Projects';
+import Resume from './pages/Resume';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/repo">
           <Projects />
+        </Route>
+        <Route path="/resume">
+          <Resume />
         </Route>
       </Switch>
     </Router>

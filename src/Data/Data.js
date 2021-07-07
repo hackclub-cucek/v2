@@ -49,18 +49,34 @@ export const homeObjThree = {
     darkText: false
 }
 export const homeObjFour = {
-    id: 'events',
+    id: 'repos',
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Events',
-    headline: 'Events',
+    topLine: 'Repos',
+    headline: 'Repos',
     description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
-    buttonLabel: 'Check Events',
+    buttonLabel: 'Check Repos',
     imgStart: true,
     img: Events,
-    alt: 'Events',
+    alt: 'Repos',
     dark: false,
     primary: false,
     darkText: true
+}
+export const homeObjFive = {
+    id: 'resume',
+    lightBg: false,
+    lightText: true,
+    lightTextDesc: true,
+    topLine: 'Resume',
+    headline: 'Resume',
+    description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
+    buttonLabel: 'Check Resume',
+    imgStart: false,
+    img: Collab,
+    alt: 'Resume',
+    dark: true,
+    primary: true,
+    darkText: false
 }
