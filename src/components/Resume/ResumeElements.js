@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const SectionContainer = styled.div`
+/* flex flex-wrap justify-center */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 export const Divcontainer = styled.div`
   user-select: none;
   margin: 100px auto;
