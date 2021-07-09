@@ -4,6 +4,7 @@ import Home from './pages';
 import Events from './pages/Events';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
+import Form from './pages/Form';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/resume">
           <Resume />
+        </Route>
+        <Route path="/form">
+          <Form />
         </Route>
       </Switch>
     </Router>

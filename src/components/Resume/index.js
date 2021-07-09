@@ -1,51 +1,52 @@
-import React from 'react';
-import { Buttonfollow, Buttonmsg, Divcontainer, Divcover, Divprofilename, I, Imgprofile, Pabout, SectionContainer } from './ResumeElements';
+import React, { useEffect } from 'react';
+import { Buttonfollow, Divcontainer, Divcover, Divprofilename, I, Imgprofile, Pabout, SectionContainer } from './ResumeElements';
 import {
     FaInstagram,
     FaTwitter,
     FaGithub,
     FaLinkedin
 } from 'react-icons/fa';
+import { app } from "../../base";
+
+const db = app.firestore();
 
 
 const Resumecard = () => {
+    const [users, setUsers] = React.useState([]);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            const usersCollection = await db.collection("users").get();
+            setUsers(
+                usersCollection.docs.map((doc) => {
+                    return doc.data();
+                })
+            );
+        };
+        fetchUsers();
+    }, []);
 
     return (
         <SectionContainer>
-            <Divcontainer>
-                <Divcover>
-                    <Imgprofile src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
-                </Divcover>
-                <Divprofilename>Suvarnesh K M</Divprofilename>
-                <Pabout>User Interface Designer and front-end developer
-                </Pabout>
-                <Buttonmsg>Message</Buttonmsg>
-                <Buttonfollow>Following</Buttonfollow>
-                <div>
-                    <I><FaInstagram /></I>
-                    <I><FaTwitter /></I>
-                    <I><FaGithub /></I>
-                    <I><FaLinkedin /></I>
-                </div>
-                <br />
-            </Divcontainer>
-            <Divcontainer>
-                <Divcover>
-                    <Imgprofile src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
-                </Divcover>
-                <Divprofilename>Rafi Rasheed</Divprofilename>
-                <Pabout>User Interface Designer and front-end developer
-                </Pabout>
-                <Buttonmsg>Message</Buttonmsg>
-                <Buttonfollow>Following</Buttonfollow>
-                <div>
-                    <I><FaInstagram /></I>
-                    <I><FaTwitter /></I>
-                    <I><FaGithub /></I>
-                    <I><FaLinkedin /></I>
-                </div>
-                <br />
-            </Divcontainer>
+            {users.map((user) => {
+                return (
+                    <Divcontainer key={user.name}>
+                        <Divcover>
+                            <Imgprofile src={user.avatar} alt={user.name}  />
+                        </Divcover>
+                        <Divprofilename>{user.name}</Divprofilename>
+                        <Pabout>{user.details}</Pabout>
+                        <a src={user.resume}><Buttonfollow>Resume</Buttonfollow></a>
+                        <div>
+                            <I><FaInstagram /></I>
+                            <I><FaTwitter /></I>
+                            <I><FaGithub /></I>
+                            <I><FaLinkedin /></I>
+                        </div>
+                        <br />
+                    </Divcontainer>
+                );
+            })}
         </SectionContainer>
 
     )
