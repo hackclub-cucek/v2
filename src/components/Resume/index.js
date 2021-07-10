@@ -30,18 +30,18 @@ const Resumecard = () => {
         <SectionContainer>
             {users.map((user) => {
                 return (
-                    <Divcontainer key={user.name}>
+                    <Divcontainer key={user.django.name}>
                         <Divcover>
-                            <Imgprofile src={user.avatar} alt={user.name}  />
+                            <Imgprofile src={user.django.avatar} alt={user.name}  />
                         </Divcover>
-                        <Divprofilename>{user.name}</Divprofilename>
-                        <Pabout>{user.details}</Pabout>
-                        <a href={user.resume}><Buttonfollow>Resume</Buttonfollow></a>
+                        <Divprofilename>{user.django.name}</Divprofilename>
+                        <Pabout>{user.django.details}</Pabout>
+                        <a href={user.django.resume}><Buttonfollow>Resume</Buttonfollow></a>
                         <div>
-                            <a href={user.instagram}><I><FaInstagram /></I></a>
-                            <a href={user.twitter}><I><FaTwitter /></I></a>
-                            <a href={user.github}><I><FaGithub /></I></a>
-                            <a href={user.linkedin}><I><FaLinkedin /></I></a>
+                            <a href={user.django.instagram}><I><FaInstagram /></I></a>
+                            <a href={user.django.twitter}><I><FaTwitter /></I></a>
+                            <a href={user.django.github}><I><FaGithub /></I></a>
+                            <a href={user.django.linkedin}><I><FaLinkedin /></I></a>
                         </div>
                         <br />
                     </Divcontainer>
