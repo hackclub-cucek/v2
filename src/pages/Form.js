@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { app } from "../base";
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
@@ -8,7 +8,6 @@ const db = app.firestore();
 
 function Form() {
   const [fileUrl, setFileUrl] = React.useState(null);
-  const [users, setUsers] = React.useState([]);
 
   const onFileChange = async (e) => {
     const file = e.target.files[0];
@@ -43,27 +42,8 @@ function Form() {
     });
   };
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const usersCollection = await db.collection("users").get();
-      setUsers(
-        usersCollection.docs.map((doc) => {
-          return doc.data();
-        })
-      );
-    };
-    fetchUsers();
-  }, []);
-
   return (
     <>
-      {/* <form onSubmit={onSubmit}>
-        <input type="file" onChange={onFileChange} />
-        <input type="text" name="username" placeholder="UserName" />
-        <input type="text" name="details" placeholder="Details" />
-        <input type="text" name="resume" placeholder="Resume" />
-        <button>Submit</button>
-      </form> */}
       <FormBody>
         <Divlogin>
           <Divbootbox style={{ 'min-height': '100vh', 'flex-grow': '1' }} >

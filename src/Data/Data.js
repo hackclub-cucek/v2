@@ -34,12 +34,13 @@ export const homeObjTwo = {
     darkText: true
 }
 export const homeObjThree = {
-    id: 'contact',
+    id: 'form',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Contact',
-    headline: 'Collab with US',
+    topLine: 'Form',
+    headline: 'Submit Your Resume',
+    buttonLabel: 'Send Resume',
     description: 'Hack Club CUCEK is a chapter of the international non-profit Hack Club and is a developers club at Cochin university college of engineering Kuttanad.',
     imgStart: false,
     img: Collab,
