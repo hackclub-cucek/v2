@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { app } from "../base";
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
@@ -7,6 +7,16 @@ import { Link } from "react-router-dom";
 const db = app.firestore();
 
 function Form() {
+  const [isloading, setloading] = useState(false);
+
+  const [username, setUsername] = useState('');
+  const [details, setDetails] = useState('');
+  const [resume, setResume] = useState('');
+  const [instagram, setInstagram] = useState('');
+  const [twitter, setTwitter] = useState('');
+  const [github, setGithub] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+
   const [fileUrl, setFileUrl] = React.useState(null);
 
   const onFileChange = async (e) => {
@@ -16,30 +26,36 @@ function Form() {
     await fileRef.put(file);
     setFileUrl(await fileRef.getDownloadURL());
   };
-
+  const django = 
+  { 
+    name: username, 
+    avatar: fileUrl, 
+    details: details, 
+    resume: resume,
+    instagram: instagram,
+    twitter: twitter,
+    github: github,
+    linkedin: linkedin
+  }
   const onSubmit = async (e) => {
-    e.preventDefault();
-    const username = e.target.username.value;
-    const details = e.target.details.value;
-    const resume = e.target.resume.value;
-    const instagram = e.target.instagram.value;
-    const twitter = e.target.twitter.value;
-    const github = e.target.github.value;
-    const linkedin = e.target.linkedin.value;
+    setloading(true);
 
     if (!username || !fileUrl || !details || !resume) {
       return;
     }
     await db.collection("users").doc(username).set({
-      name: username,
-      avatar: fileUrl,
-      details: details,
-      resume: resume,
-      instagram: instagram,
-      twitter: twitter,
-      github: github,
-      linkedin: linkedin
+      django
     });
+
+    setUsername('');
+    setDetails('');
+    setFileUrl('');
+    setResume('');
+    setInstagram('');
+    setTwitter('');
+    setGithub('');
+    setLinkedin('');
+    setloading(false);
   };
 
   return (
@@ -49,33 +65,33 @@ function Form() {
           <Divbootbox style={{ 'min-height': '100vh', 'flex-grow': '1' }} >
             <DivLoginBackGround>
               <DivLoginBackgroundGridContainer>
-                <DivBoxRootFlex1 style={{'grid-area': 'top / start / 8 / end'}}>
-                  <DivBoxRoot2 style={{'background-image': 'linear-gradient(white 0%, rgb(247, 250, 252) 33%)', 'flex-grow': '1'}}>
+                <DivBoxRootFlex1 style={{ 'grid-area': 'top / start / 8 / end' }}>
+                  <DivBoxRoot2 style={{ 'background-image': 'linear-gradient(white 0%, rgb(247, 250, 252) 33%)', 'flex-grow': '1' }}>
                   </DivBoxRoot2>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '4 / 2 / auto / 5'}}>
-                  <Div1 style={{'flex-grow': '1'}}></Div1>
+                <DivBoxRootFlex1 style={{ 'grid-area': '4 / 2 / auto / 5' }}>
+                  <Div1 style={{ 'flex-grow': '1' }}></Div1>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '6 / start / auto / 2'}}>
-                  <Div2 style={{'flex-grow': '1'}}></Div2>
+                <DivBoxRootFlex1 style={{ 'grid-area': '6 / start / auto / 2' }}>
+                  <Div2 style={{ 'flex-grow': '1' }}></Div2>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '7 / start / auto / 4'}}>
-                  <Div3 style={{'flex-grow': '1'}}></Div3>
+                <DivBoxRootFlex1 style={{ 'grid-area': '7 / start / auto / 4' }}>
+                  <Div3 style={{ 'flex-grow': '1' }}></Div3>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '8 / 4 / auto / 6'}}>
-                  <Div4 style={{'flex-grow': '1'}}></Div4>
+                <DivBoxRootFlex1 style={{ 'grid-area': '8 / 4 / auto / 6' }}>
+                  <Div4 style={{ 'flex-grow': '1' }}></Div4>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '2 / 15 / auto / end'}}>
-                  <Div5 style={{'flex-grow': '1'}}></Div5>
+                <DivBoxRootFlex1 style={{ 'grid-area': '2 / 15 / auto / end' }}>
+                  <Div5 style={{ 'flex-grow': '1' }}></Div5>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '3 / 14 / auto / end'}}>
-                  <Div6 style={{'flex-grow': '1'}}></Div6>
+                <DivBoxRootFlex1 style={{ 'grid-area': '3 / 14 / auto / end' }}>
+                  <Div6 style={{ 'flex-grow': '1' }}></Div6>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '4 / 17 / auto / 20'}}>
-                  <Div7 style={{'flex-grow': '1'}}></Div7>
+                <DivBoxRootFlex1 style={{ 'grid-area': '4 / 17 / auto / 20' }}>
+                  <Div7 style={{ 'flex-grow': '1' }}></Div7>
                 </DivBoxRootFlex1>
-                <DivBoxRootFlex1 style={{'grid-area': '5 / 14 / auto / 17'}}>
-                  <Div8 style={{'flex-grow': '1'}}></Div8>
+                <DivBoxRootFlex1 style={{ 'grid-area': '5 / 14 / auto / 17' }}>
+                  <Div8 style={{ 'flex-grow': '1' }}></Div8>
                 </DivBoxRootFlex1>
               </DivLoginBackgroundGridContainer>
             </DivLoginBackGround>
@@ -87,10 +103,13 @@ function Form() {
                 <DivFormbg>
                   <DivFormbgInner>
                     <Span>Submit your Resume</Span>
-                    <form id="stripe-login" onSubmit={onSubmit}>
+                    <div>
                       <DivField>
                         <FormLabel for="username">User Name</FormLabel>
-                        <FormInput type="text" name="username" />
+                        <FormInput type="text" 
+                        onChange={(e) => setUsername(e.target.value)}
+                        value={username}
+                        />
                       </DivField>
                       <DivField>
                         <FormLabel for="file">Upload Image</FormLabel>
@@ -98,32 +117,65 @@ function Form() {
                       </DivField>
                       <DivField>
                         <FormLabel for="details">Details</FormLabel>
-                        <FormInput type="text" name="details" />
+                        <FormInput type="text" name="details" 
+                        onChange={(e) => setDetails(e.target.value)}
+                        value={details}
+                        />
                       </DivField>
                       <DivField>
                         <FormLabel for="resume">Resume</FormLabel>
-                        <FormInput type="text" name="resume" />
+                        <FormInput type="text" name="resume" 
+                        onChange={(e) => setResume(e.target.value)}
+                        value={resume}
+                        />
                       </DivField>
                       <DivField>
                         <FormLabel for="instagram">Instagram</FormLabel>
-                        <FormInput type="text" name="instagram" />
+                        <FormInput type="text" name="instagram" 
+                        onChange={(e) => setInstagram(e.target.value)}
+                        value={instagram}
+                        />
                       </DivField>
                       <DivField>
                         <FormLabel for="twitter">Twitter</FormLabel>
-                        <FormInput type="text" name="twitter" />
+                        <FormInput type="text" name="twitter" 
+                        onChange={(e) => setTwitter(e.target.value)}
+                        value={twitter}
+                        />
                       </DivField>
                       <DivField>
                         <FormLabel for="github">GitHub</FormLabel>
-                        <FormInput type="text" name="github" />
+                        <FormInput type="text" name="github" 
+                        onChange={(e) => setGithub(e.target.value)}
+                        value={github}
+                        />
                       </DivField>
                       <DivField>
                         <FormLabel for="linkedin">Linkedin</FormLabel>
-                        <FormInput type="text" name="linkedin" />
+                        <FormInput type="text" name="linkedin" 
+                        onChange={(e) => setLinkedin(e.target.value)}
+                        value={linkedin}
+                        />
                       </DivField>
                       <DivField1>
-                        <SubmitInput type="submit" name="submit" value="Continue" />
+                        {!isloading &&
+                          <SubmitInput 
+                          type="submit" 
+                          name="submit" 
+                          value="Submit" 
+                          onClick={onSubmit}
+                          />
+                        }
+                        {isloading &&
+                          <SubmitInput 
+                          type="submit" 
+                          name="submit" 
+                          value="Submiting......" 
+                          disabled
+                          />
+                        }
                       </DivField1>
-                    </form>
+                    </div>
                   </DivFormbgInner>
                 </DivFormbg>
               </div>
