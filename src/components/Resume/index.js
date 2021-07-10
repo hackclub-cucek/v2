@@ -36,12 +36,12 @@ const Resumecard = () => {
                         </Divcover>
                         <Divprofilename>{user.name}</Divprofilename>
                         <Pabout>{user.details}</Pabout>
-                        <a src={user.resume}><Buttonfollow>Resume</Buttonfollow></a>
+                        <a href={user.resume}><Buttonfollow>Resume</Buttonfollow></a>
                         <div>
-                            <I><FaInstagram /></I>
-                            <I><FaTwitter /></I>
-                            <I><FaGithub /></I>
-                            <I><FaLinkedin /></I>
+                            <a href={user.instagram}><I><FaInstagram /></I></a>
+                            <a href={user.twitter}><I><FaTwitter /></I></a>
+                            <a href={user.github}><I><FaGithub /></I></a>
+                            <a href={user.linkedin}><I><FaLinkedin /></I></a>
                         </div>
                         <br />
                     </Divcontainer>
