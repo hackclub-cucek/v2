@@ -3,3 +3,28 @@
 <p align="center"><i>The latest source code for cucek.hackclub.com</i></p>
 
  
+### Development environment setup
+
+The stack: [React](https://reactjs.org/) with the [styled component](https://styled-components.com/).
+
+Stuff you need installed ahead of time:
+
+- Git
+- Yarn
+- An operating system (we hope)
+
+Clone it!
+
+    $ git clone https://github.com/hackclub-cucek/v2.git
+
+Go into the directory!
+
+    $ cd v2
+
+Install dependencies!
+
+    $ yarn install
+
+Run it!
+
+    $ yarn start
