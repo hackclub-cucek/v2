@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-# api
-/src/.base.js
 
 # production
 /build
