@@ -72,7 +72,7 @@ const Footer = () => {
                             </SocialLogo>
                             <WebsiteRights>Hack Club CUCEK ©️ {new Date().getFullYear()}
                             All rights reserved.</WebsiteRights>
-                            <SocialIconLink href="https://www.instagram.com/programmermecucek/" target="_blank" rel="noreferrer"
+                            <SocialIconLink href="https://www.instagram.com/hackclubcucek/" target="_blank" rel="noreferrer"
                             aria-label="Instagram">
                                 <FaInstagram />
                             </SocialIconLink>
